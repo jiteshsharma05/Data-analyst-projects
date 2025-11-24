@@ -42,7 +42,7 @@ df["Amount"] = pd.to_numeric(df["Amount"], errors="coerce")
 # Remove rows where Date or Amount is missing
 df = df.dropna(subset=["Date", "Amount"])
 
-# SIMPLE EDA
+# EDA
 
 print("\nTotal Orders:", len(df))
 
@@ -69,3 +69,4 @@ print(df["fulfilled-by"].value_counts())
 
 print("\nSales by Country:")
 print(df["ship-country"].value_counts())
+
